@@ -13,7 +13,7 @@ const Banner = () => {
     />
     <div className='mr-[40px]'>
       <h1 className="text-7xl text-[#101727] font-bold leading-normal"> Supercharge Your <br></br>Digital Workflow</h1>
-      <p className="py-6">
+      <p className="py-6 text-[#627382]">
         Access premium AI tools, design assets, templates, and productivity <br />
 software—all in one place. Start creating faster today. <br />
 
