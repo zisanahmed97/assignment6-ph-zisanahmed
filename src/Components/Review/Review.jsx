@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = () => {
     return (
-        <div className='bg-gradient-to-r from-[#4F39F6] to-[#9514FA] flex justify-around py-[60px]'>
+        <div className='bg-gradient-to-r from-[#4F39F6] to-[#9514FA] flex justify-around py-[60px] '>
             <div>
                 <h1 className='text-[#FFFFFF] text-5xl font-bold'>50K+</h1>
                 <p className='text-[#FFFFFF] text-xl '>Active Users</p>
