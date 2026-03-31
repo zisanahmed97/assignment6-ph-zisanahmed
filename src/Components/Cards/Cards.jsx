@@ -26,6 +26,11 @@ const Cards = ({cardPromise ,selectedCard, setSelectedCard}) => {
   const updated = selectedCard.filter(item => item.id !== id);
   setSelectedCard(updated);
 };
+
+
+const handleClearCart = () => {
+  setSelectedCard([]);
+};
     // console.log(selectedType , "selected")
     return (
         <div>
@@ -58,7 +63,10 @@ const Cards = ({cardPromise ,selectedCard, setSelectedCard}) => {
       </div>
     </div>
   ) : (
-    <SelectedCard selectedCard={selectedCard} handleRemoveFromCart={handleRemoveFromCart}  ></SelectedCard>
+    <SelectedCard 
+    selectedCard={selectedCard} 
+    handleRemoveFromCart={handleRemoveFromCart}
+     handleClearCart={handleClearCart} ></SelectedCard>
   )
 }
         </div>

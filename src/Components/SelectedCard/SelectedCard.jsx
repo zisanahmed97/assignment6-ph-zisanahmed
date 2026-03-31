@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectedCard = ({selectedCard, handleRemoveFromCart}) => {
+const SelectedCard = ({selectedCard, handleRemoveFromCart, handleClearCart}) => {
     console.log(selectedCard)
   const totalPrice = selectedCard.reduce((total, item) => total + item.price, 0);
     return (
@@ -37,6 +37,11 @@ const SelectedCard = ({selectedCard, handleRemoveFromCart}) => {
                                 <p className='text-xl font-bold text-black'>${totalPrice}</p>
                               </div>
 
+
+                <div className='w-5xl mx-auto'>
+                      <button onClick={handleClearCart} className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-semibold mt-3.5 w-5xl rounded-2xl">Proceed to Checkout</button>            
+
+                </div>
             </div>
 
           
