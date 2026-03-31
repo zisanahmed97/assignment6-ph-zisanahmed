@@ -13,10 +13,10 @@ const Cards = ({cardPromise}) => {
                 <h2 className='text-4xl text-black font-bold text-center mt-[100px]'>Premium Digital Tools</h2>
                 <p className='text-[#627382] text-sm text-center mt-[20px]'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
             </div>
-            <div className='flex justify-center gap-2 mt-3'>
-                <button onClick={()=>setSelectedType("Products")} className={`btn btn-primary  ${selectedType === "Products"? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : "btn-warning"} rounded-4xl `}>Products</button>
+            <div className='flex justify-center  mt-3'>
+                <button onClick={()=>setSelectedType("Products")} className={`btn   ${selectedType === "Products"? "text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-4xl `}>Products</button>
 
-                <button onClick={()=>setSelectedType("Cart")} className={`btn  ${selectedType === "Cart"? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : "btn-warning"} rounded-4xl `}>Cart</button>
+                <button onClick={()=>setSelectedType("Cart")} className={`btn px-[24px]  ${selectedType === "Cart"? "text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-4xl   `}>Cart (0)</button>
             </div>
                  <div className="max-w-7xl mx-auto px-4 py-10">
          <div className="grid grid-cols-1  md:grid-cols-3 gap-6 items-stretch" >

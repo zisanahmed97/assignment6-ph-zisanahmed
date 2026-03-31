@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AvailableCard = ({availableCard}) => {
-    console.log(availableCard)
+    console.log(availableCard);
+
+    const [isSelected , setIsSelected] = useState(false);
     return (
         <div >
           <div className="card w-96 h-full bg-base-100 shadow-sm ">
@@ -33,7 +35,9 @@ const AvailableCard = ({availableCard}) => {
     
     </ul>
     <div className="mt-6">
-      <button className="btn btn-primary btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl">Buy Now</button>
+      <button onClick={() => setIsSelected(true)} className="btn btn-primary btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl">
+        {isSelected === true ? "Added to Cart" : "Buy Now"}
+        </button>
     </div>
   </div>
 </div>
