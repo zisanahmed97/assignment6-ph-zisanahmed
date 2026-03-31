@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 
-const AvailableCard = ({availableCard}) => {
+const AvailableCard = ({availableCard, handleAddToCart}) => {
     console.log(availableCard);
 
     const [isSelected , setIsSelected] = useState(false);
+
+    const handleChooseProduct= () => {
+      setIsSelected(true);
+       handleAddToCart(availableCard); 
+    }
     return (
         <div >
           <div className="card w-96 h-full bg-base-100 shadow-sm ">
@@ -35,7 +40,7 @@ const AvailableCard = ({availableCard}) => {
     
     </ul>
     <div className="mt-6">
-      <button onClick={() => setIsSelected(true)} className="btn btn-primary btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl">
+      <button onClick={handleChooseProduct}  className="btn btn-primary btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl">
         {isSelected === true ? "Added to Cart" : "Buy Now"}
         </button>
     </div>
