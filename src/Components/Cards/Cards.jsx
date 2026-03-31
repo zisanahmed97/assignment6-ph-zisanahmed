@@ -36,7 +36,7 @@ const Cards = ({cardPromise}) => {
             <div className='flex justify-center  mt-3'>
                 <button onClick={()=>setSelectedType("Products")} className={`btn   ${selectedType === "Products"? "text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-4xl `}>Products</button>
 
-                <button onClick={()=>setSelectedType("Cart")} className={`btn px-[24px]  ${selectedType === "Cart"? "text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-4xl   `}>Cart (0)</button>
+                <button onClick={()=>setSelectedType("Cart")} className={`btn px-[24px]  ${selectedType === "Cart"? "text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : ""} rounded-4xl   `}>Cart ({selectedCard.length}))</button>
             </div>
              
 

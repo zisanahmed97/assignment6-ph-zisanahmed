@@ -2,7 +2,7 @@ import React from 'react';
 
 const SelectedCard = ({selectedCard, handleRemoveFromCart}) => {
     console.log(selectedCard)
-
+  const totalPrice = selectedCard.reduce((total, item) => total + item.price, 0);
     return (
         <div>
             <div className='border border-blue-100 shadow max-w-7xl mx-auto px-4 py-10 mt-3 rounded-2xl'>
@@ -26,11 +26,16 @@ const SelectedCard = ({selectedCard, handleRemoveFromCart}) => {
                                </div>
                                <button onClick={() => handleRemoveFromCart(item.id)} className="btn btn-soft btn-error">Remove</button>
                               </div>
+                             
                             </div>
                         ))
                     )
                 }
             </div>
+             <div className='flex justify-between'>
+                                <p className='text-[#627382] text-sm mt-2.5'>Total:</p>
+                                <p className='text-xl font-bold text-black'>${totalPrice}</p>
+                              </div>
 
             </div>
 
