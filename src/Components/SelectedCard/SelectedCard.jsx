@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectedCard = ({selectedCard}) => {
+const SelectedCard = ({selectedCard, handleRemoveFromCart}) => {
     console.log(selectedCard)
 
     return (
@@ -24,7 +24,7 @@ const SelectedCard = ({selectedCard}) => {
                                 <p className='text-[#627382] text-sm'>${item.price}</p>
                                  </div>
                                </div>
-                               <button className="btn btn-soft btn-error">Remove</button>
+                               <button onClick={() => handleRemoveFromCart(item.id)} className="btn btn-soft btn-error">Remove</button>
                               </div>
                             </div>
                         ))
