@@ -3,13 +3,13 @@ import React, { use, useState } from 'react';
 import AvailableCard from '../AvailableCard/AvailableCard';
 import SelectedCard from '../SelectedCard/SelectedCard';
 
-const Cards = ({cardPromise}) => {
+const Cards = ({cardPromise ,selectedCard, setSelectedCard}) => {
     const cards = use(cardPromise);
     console.log(cards)
 
     const [selectedType , setSelectedType] = useState("Products");
 
-    const[selectedCard , setSelectedCard] = useState([]);
+    // const[selectedCard , setSelectedCard] = useState([]);
 
 
    

@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Cards from './Components/Cards/Cards'
@@ -13,18 +13,19 @@ import Review from './Components/Review/Review'
   }
 
 function App() {
-
+const [selectedCard, setSelectedCard] = useState([]);
  
    const cardPromise = fetchCard();
   return (
    
     <>
-    <Navbar></Navbar>
+    <Navbar selectedCard={selectedCard}></Navbar>
     <Banner></Banner>
     <Review></Review>
 
     <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-  <Cards cardPromise={cardPromise}></Cards>
+  <Cards cardPromise={cardPromise}  selectedCard={selectedCard}
+  setSelectedCard={setSelectedCard}></Cards>
     </Suspense>
   
     

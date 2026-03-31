@@ -1,7 +1,7 @@
 import React from 'react';
 import shoppingcart from "../../../assets/products/shopping-cart.png"
 
-const Navbar = () => {
+const Navbar = ({selectedCard}) => {
     return (
         <div >
             <div className="navbar bg-base-100 shadow-sm ">
@@ -34,7 +34,16 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <img className='mx-[5px]' src={shoppingcart} alt="" />
+   
+    <div className="relative mx-[5px]">
+
+  <img  src={shoppingcart} alt="" />
+
+ 
+  <span className="absolute -top-2 -right-2 bg-orange-600 text-white text-xs px-2 rounded-full">
+    {selectedCard.length}
+  </span>
+</div>
      <a className='mr-[5px]'>Log in</a>
     <a className="btn btn-primary">Get Started</a>
   </div>
