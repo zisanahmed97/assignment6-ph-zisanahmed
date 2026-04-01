@@ -6,6 +6,7 @@ import Cards from './Components/Cards/Cards'
 import Navbar from './components/navbar/navbar'
 import Review from './Components/Review/Review'
 import Options from './Components/Options/Options'
+import Subscription from './Components/Subscription/Subscription'
 
 
  const fetchCard = async() =>{
@@ -29,6 +30,7 @@ const [selectedCard, setSelectedCard] = useState([]);
   setSelectedCard={setSelectedCard}></Cards>
     </Suspense>
   <Options></Options>
+  <Subscription></Subscription>
     
     </>
   )

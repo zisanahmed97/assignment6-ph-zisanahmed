@@ -16,13 +16,13 @@ const Options = () => {
                 </div>
                 <div className='border border-blue-100 w-[380px] py-[88px] px-[24px] rounded-3xl shadow-xl '>
                     <img className='mx-auto bg-fuchsia-100 rounded-full p-3' src={pack} alt="" />
-                    <h2 className='text-center mt-2 text-black font-bold text-xl'>Create Account</h2>
-                    <p className='text-[#627382] text-sm text-center mt-2'>Sign up for free in seconds. No credit card required to get started.</p>
+                    <h2 className='text-center mt-2 text-black font-bold text-xl'>Choose Products</h2>
+                    <p className='text-[#627382] text-sm text-center mt-2'>Browse our catalog and select the tools that fit your needs.</p>
                 </div>
                 <div className='border border-blue-100 w-[380px] py-[88px] px-[24px]  rounded-3xl shadow-xl'>
                     <img className='mx-auto bg-fuchsia-100 rounded-full p-3' src={rocket} alt="" />
-                    <h2 className='text-center mt-2 text-black font-bold text-xl'>Create Account</h2>
-                    <p className='text-[#627382] text-sm text-center mt-2'>Sign up for free in seconds. No credit card required to get started.</p>
+                    <h2 className='text-center mt-2 text-black font-bold text-xl'>Start Creating</h2>
+                    <p className='text-[#627382] text-sm text-center mt-2'>Download and start using your premium tools immediately.</p>
                 </div>
             </div>
         </div>
