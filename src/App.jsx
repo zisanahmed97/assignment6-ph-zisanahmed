@@ -7,6 +7,7 @@ import Navbar from './components/navbar/navbar'
 import Review from './Components/Review/Review'
 import Options from './Components/Options/Options'
 import Subscription from './Components/Subscription/Subscription'
+import Footer from './Components/Footer/Footer'
 
 
  const fetchCard = async() =>{
@@ -16,6 +17,8 @@ import Subscription from './Components/Subscription/Subscription'
 
 function App() {
 const [selectedCard, setSelectedCard] = useState([]);
+
+const [selectedType, setSelectedType] = useState("Products");
  
    const cardPromise = fetchCard();
   return (
@@ -27,10 +30,20 @@ const [selectedCard, setSelectedCard] = useState([]);
 
     <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
   <Cards cardPromise={cardPromise}  selectedCard={selectedCard}
-  setSelectedCard={setSelectedCard}></Cards>
+  setSelectedCard={setSelectedCard}    selectedType={selectedType}
+  setSelectedType={setSelectedType}></Cards>
     </Suspense>
-  <Options></Options>
-  <Subscription></Subscription>
+  
+
+  {
+  selectedType === "Products" && (
+    <>
+      <Options></Options>
+      <Subscription></Subscription>
+      <Footer></Footer>
+    </>
+  )
+}
     
     </>
   )
