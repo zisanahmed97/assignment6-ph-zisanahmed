@@ -5,6 +5,7 @@ import Banner from './Components/Banner/Banner'
 import Cards from './Components/Cards/Cards'
 import Navbar from './components/navbar/navbar'
 import Review from './Components/Review/Review'
+import Options from './Components/Options/Options'
 
 
  const fetchCard = async() =>{
@@ -27,7 +28,7 @@ const [selectedCard, setSelectedCard] = useState([]);
   <Cards cardPromise={cardPromise}  selectedCard={selectedCard}
   setSelectedCard={setSelectedCard}></Cards>
     </Suspense>
-  
+  <Options></Options>
     
     </>
   )
