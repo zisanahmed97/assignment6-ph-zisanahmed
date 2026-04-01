@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const AvailableCard = ({availableCard, handleAddToCart}) => {
     console.log(availableCard);
@@ -8,6 +9,7 @@ const AvailableCard = ({availableCard, handleAddToCart}) => {
     const handleChooseProduct= () => {
       setIsSelected(true);
        handleAddToCart(availableCard); 
+       toast.success("Added to cart!");
     }
     return (
         <div >
@@ -40,7 +42,7 @@ const AvailableCard = ({availableCard, handleAddToCart}) => {
     
     </ul>
     <div className="mt-6">
-      <button onClick={handleChooseProduct}  className="btn btn-primary btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl">
+      <button  onClick={handleChooseProduct}  className="btn btn-primary btn-block bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl">
         {isSelected === true ? "Added to Cart" : "Buy Now"}
         </button>
     </div>

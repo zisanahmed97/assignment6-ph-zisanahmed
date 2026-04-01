@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const SelectedCard = ({selectedCard, handleRemoveFromCart, handleClearCart}) => {
     console.log(selectedCard)
@@ -24,7 +25,10 @@ const SelectedCard = ({selectedCard, handleRemoveFromCart, handleClearCart}) => 
                                 <p className='text-[#627382] text-sm'>${item.price}</p>
                                  </div>
                                </div>
-                               <button onClick={() => handleRemoveFromCart(item.id)} className="btn btn-soft btn-error">Remove</button>
+                               <button  onClick={() =>{
+                                handleRemoveFromCart(item.id);
+                                toast.error("Item removed!");
+                               } } className="btn btn-soft btn-error">Remove</button>
                               </div>
                              
                             </div>
@@ -39,7 +43,7 @@ const SelectedCard = ({selectedCard, handleRemoveFromCart, handleClearCart}) => 
 
 
                 <div className='w-5xl mx-auto'>
-                      <button onClick={handleClearCart} className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-semibold mt-3.5 w-5xl rounded-2xl">Proceed to Checkout</button>            
+                      <button  onClick={handleClearCart} className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-semibold mt-3.5 w-5xl rounded-2xl">Proceed to Checkout</button>            
 
                 </div>
             </div>

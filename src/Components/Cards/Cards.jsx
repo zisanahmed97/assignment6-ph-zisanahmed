@@ -1,4 +1,5 @@
 import React, { use, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import AvailableCard from '../AvailableCard/AvailableCard';
 import SelectedCard from '../SelectedCard/SelectedCard';
@@ -29,6 +30,7 @@ const Cards = ({cardPromise ,selectedCard, setSelectedCard, selectedType, setSel
 
 
 const handleClearCart = () => {
+  toast.success("Payment successful!");
   setSelectedCard([]);
 };
     // console.log(selectedType , "selected")

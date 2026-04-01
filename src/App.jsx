@@ -9,6 +9,8 @@ import Options from './Components/Options/Options'
 import Subscription from './Components/Subscription/Subscription'
 import Footer from './Components/Footer/Footer'
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
  const fetchCard = async() =>{
     const res = await fetch("/public/data.json");
@@ -24,6 +26,7 @@ const [selectedType, setSelectedType] = useState("Products");
   return (
    
     <>
+    <ToastContainer />
     <Navbar selectedCard={selectedCard}></Navbar>
     <Banner></Banner>
     <Review></Review>
